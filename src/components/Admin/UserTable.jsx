@@ -113,9 +113,9 @@ const UserTable = () => {
         rows.unshift({
             id: item._id,
             name: item.name,
-            avatar: item.avatar.url,
+            avatar: item.avatar?.url || 'https://ltnth.edu.vn/wp-content/uploads/2016/08/logo-truong-dai-hoc-bach-khoa-tphcm-trung-tam-ltdh-nguyen-thuong-hien-200x200.png',
             email: item.email,
-            gender: item.gender.toUpperCase(),
+            gender: item.gender?.toUpperCase(),
             role: item.role,
             registeredOn: new Date(item.createdAt).toISOString().substring(0, 10),
         });
